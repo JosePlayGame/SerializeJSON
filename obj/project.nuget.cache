@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "18nkrTa9bRrzUgkFf0xrXCTY9/4R82/60ZfUOfPyXFt0l0J+TmeAJa9jAeiOGXhw1XLDOgzfXC6zHzFoO5mZgA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\arman\\OneDrive\\Documentos\\GitHub\\SerializeJSON\\SerializarJSON.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arman\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
