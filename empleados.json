@@ -1,0 +1,72 @@
+[
+  {
+    "ID": 1,
+    "Apellidos": "Pedro",
+    "Nombre": "Martinez",
+    "Sueldo": 2364.0,
+    "Borrado": false
+  },
+  {
+    "ID": 2,
+    "Apellidos": "Enrique",
+    "Nombre": "Perez",
+    "Sueldo": 5000.5,
+    "Borrado": false
+  },
+  {
+    "ID": 3,
+    "Apellidos": "Jesús",
+    "Nombre": "Perez",
+    "Sueldo": 3359.0,
+    "Borrado": false
+  },
+  {
+    "ID": 4,
+    "Apellidos": "Pedro",
+    "Nombre": "Perez",
+    "Sueldo": 2282.0,
+    "Borrado": false
+  },
+  {
+    "ID": 5,
+    "Apellidos": "Alberto",
+    "Nombre": "Perez",
+    "Sueldo": 3952.0,
+    "Borrado": false
+  },
+  {
+    "ID": 6,
+    "Apellidos": "Enrique",
+    "Nombre": "Ruiz",
+    "Sueldo": 3942.0,
+    "Borrado": false
+  },
+  {
+    "ID": 7,
+    "Apellidos": "Enrique",
+    "Nombre": "Lopez",
+    "Sueldo": 2440.0,
+    "Borrado": false
+  },
+  {
+    "ID": 8,
+    "Apellidos": "Maria",
+    "Nombre": "Perez",
+    "Sueldo": 2122.0,
+    "Borrado": false
+  },
+  {
+    "ID": 9,
+    "Apellidos": "Enrique",
+    "Nombre": "Perez",
+    "Sueldo": 3700.0,
+    "Borrado": false
+  },
+  {
+    "ID": 10,
+    "Apellidos": "Maria",
+    "Nombre": "Perez",
+    "Sueldo": 2813.0,
+    "Borrado": false
+  }
+]

@@ -2,6 +2,7 @@ class Empleado
 {
     //#region Sirve para crear regiones y hacer el codigo más visible para el programador
     #region Propiedades
+    public int ID{get;set;}
     public string Apellidos { get; set; }
     public string Nombre { get; set;}
     public float Sueldo { get; set; }
@@ -9,8 +10,9 @@ class Empleado
     #endregion
 
     #region Constructores
-    public Empleado(string nom, string ape, float sue) 
+    public Empleado(int id,string nom, string ape, float sue) 
     { 
+        ID=id;
         Apellidos = ape;
         Nombre = nom;
         Sueldo = sue;
@@ -20,7 +22,7 @@ class Empleado
     #region Métodos
     public override string ToString()
     {
-        return $"{Apellidos,-30}{Nombre,-20}{Sueldo,9}€";
+        return $"#{ID,-5}{Apellidos,-30}{Nombre,-20}{Sueldo,-7}€";
     }
     #endregion
 }

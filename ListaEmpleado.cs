@@ -16,7 +16,7 @@ public class ListaEmpleado
     #endregion
     #region Metodos
     private void GenerarJSON(){
-        string json = JsonConvert.SerializeObject(_plantilla,Formatting.Indented);
+        string json = JsonConvert.SerializeObject(_plantilla,Formatting.None);
         File.WriteAllText(rutaficheo,json);
     }
     public void ListarJSON(){
@@ -45,15 +45,31 @@ public class ListaEmpleado
         string[]nombres={"Juan","Pedro","Maria","Alberto","Jesús","Enrique","Aitor"};
         string[]apellidos = {"Perez","Gonzalez","Lopez","Martinez","Garcia","Ruiz","Sanchez"};
         Random rnd = new Random();
+        float sueldo = 0f;
         for (int i = 0; i < cuantos; i++)
         {
-            _plantilla.Add(new Empleado(apellidos[rnd.Next(0,apellidos.Length-1)],nombres[rnd.Next(0,nombres.Length-1)],(float)Math.Round(rnd.NextDouble()*(4000-1400)+1400)));
+            sueldo= (float)Math.Round(rnd.NextDouble()*(4000-1400)+1400);
+            _plantilla.Add(new Empleado(i,apellidos[rnd.Next(0,apellidos.Length-1)],nombres[rnd.Next(0,nombres.Length-1)],sueldo));
         }
         GenerarJSON();
     }
     public override string ToString()
     {
         return String.Join("\n",_plantilla);
+    }
+    public bool ActualizarSueldoJSON(int id,float nuevoSueldo){
+        if(File.Exists(rutaficheo)){
+            string json = File.ReadAllText(rutaficheo);
+            if (json.Contains(id.ToString()))
+            {
+                dynamic? arrayempleados = JsonConvert.DeserializeObject(json);
+                arrayempleados![id]["Sueldo"]=nuevoSueldo;
+                string datosASalvar = JsonConvert.SerializeObject(arrayempleados,Formatting.Indented);
+                File.WriteAllText(rutaficheo,datosASalvar);
+                return true;
+            }
+        }
+        return false;
     }
     #endregion
 }
